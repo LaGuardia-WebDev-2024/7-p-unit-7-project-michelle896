@@ -4,35 +4,64 @@ void setup() {
 }
 
 //🎯Variable Declarations Go Here
-var fireworkX = 20;
+var fireworkx = 100;
+var rectx = 53;
+var recty = 66;
+var fireworkx= 20;
+var rectx= 53;
+var recty= 66;
+var rectsize= 20;
 
-//🟢Draw Procedure - Runs on Repeat
+
+
+
+//🟢Draw Function - Runs on Repeat
 draw = function(){
- 
-  background(255,255,255,0);
-  
-   if(mousePressed){
-    showXYPositions();
-    
+  noStroke()
+
+  //Shapes and Color Go Here
+  background(0, 0, 0);
+  if(mousePressed){
+  showXYPositions();
   }
   
-  //🎯Animation Code Goes Here
-  rect(fireworkX, 15, 10, 10);
+  rect(fireworkx, 15, 10, 10);
+  fill(35,39,245);
+  ellipse(rectx,recty,rectsize,rectsize*0.75);
   
-  fireworkX = fireworkX + 1;
+  rectx = rectx -1;
+  recty = recty +1;
+  rectsize = rectsize +.5;
+  
+  if (rectx>400) {
+  rectx = 108
+  recty = 305
+  rectsize = 20
+  }
 
+ rectx = recty +1;
+  
 }
+
 
 //🟡Extra FUN Features Ms. Hall Added
 //Proceed with Caution (and Curiosity!)
-
 showXYPositions = function(){
-    fill(255,255,255)
-    rect(270,300,150,100)
-    fill(0,0,0)
-    textSize(30)
-    text("x = " + mouseX + "\ny = " +mouseY, 290, 350)
-    fill(255,0,255)
-    ellipse(mouseX, mouseY, 10, 10);
-    fill(255,255,255)
+fill(255,255,255)
+rect(270,300,150,100)
+fill(0,0,0)
+textSize(30)
+text("x = " mouseX + "\ny = " +mouseY, 290, 350)
+fill(255, 0, 255)
+ellipse(mouseX, mouseY, 10, 10);
+fill(255,255,255)
 }
+
+//🟡Mouse Pressed Procedue - Runs When Mouse is Pressed on Canvas
+void mousePressed(){
+
+  
+}
+
+
+
