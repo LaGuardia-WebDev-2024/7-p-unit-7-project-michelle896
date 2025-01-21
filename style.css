@@ -1,12 +1,14 @@
 body {
-  background-color: black;
+  background-color:black;
   text-align: center;
   color: white;
+  font-family: "Jersey 15", serif;
+  font-weight: 400;
+  font-style: normal;
 }
 
-
 #myCanvas {
-  background-image: url("https://images.pexels.com/photos/1387577/pexels-photo-1387577.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2");
+  background-color:blue;
   background-size: 400px;
   border-radius: 30px;
   border: 1px solid rgb(255,245,227);
@@ -16,5 +18,8 @@ body {
   display: flex;
   text-align: left;
   justify-content: space-around;
+}
+li{
+  font-size= 30px
 }
 
